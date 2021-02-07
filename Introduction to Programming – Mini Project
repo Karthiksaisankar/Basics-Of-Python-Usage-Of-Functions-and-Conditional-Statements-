@@ -1,0 +1,70 @@
+def encrypt(a,b):
+    List=[]
+    count=0
+    for i in a:
+        List.append(ord(i))
+    for i in List:
+        if (i>=65 and i<=90):
+            if((i+b)<=90):
+                List[count]=i+b
+            else:
+                List[count]=i+b-26
+        elif(i>=97 and i<=122):
+                if((i+b)<=122):
+                    List[count]=i+b
+                else:
+                    List[count]=i+b-26
+        count=count+1
+    for i in List:
+        print(chr(i),end="")
+encrypt("hello world!", 3)
+
+
+def decrypt(a,b):
+    List=[]
+    count=0
+    for i in a:
+        List.append(ord(i))
+    for i in List:
+        if (i>=65 and i<=90):
+            if((i-b)<=90):
+                List[count]=i-b
+            else:
+                List[count]=i+b+26
+        elif(i>=97 and i<=122):
+                if((i-b)<=122):
+                    List[count]=i-b
+                else:
+                    List[count]=i+b+26
+        count=count+1
+    for i in List:
+        print(chr(i),end="")
+decrypt("khoor zruog!", 3)
+
+print('which shape would you like to calculate the area for, please enter the option number',end='\n')
+print('1.Square',end='\n')
+print('2.Square',end='\n')
+print('3.Square',end='\n')
+print('4.Square',end='\n')
+print('Enter Option:')
+option=int(input('enter the option:'))
+if option==1:
+    s=int(input('please enter the length of the side:'))
+    a=s**2
+    print(a)
+if option==2:
+    l=int(input('please enter the length of the rectangle:'))
+    b=int(input('please enter the breadth of the rectangle:'))
+    B=l*b
+    print(B)
+if option==3:
+    b=int(input('please enter the base of the traingle:'))
+    h=int(input('please enter the height of the traingle:'))
+    c=(0.5)*b*h
+    print(c)
+if option==4:
+    r=int(input('please enter the radius of the circle:'))
+    d=3.14*r*r
+    print(d)
+if option==str:
+    print('invalid input, please enter a number')
