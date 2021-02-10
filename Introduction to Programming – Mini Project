@@ -46,28 +46,28 @@ decrypt("khoor zruog!", 3)
 # Code for a Shape Area Calculator
 print('which shape would you like to calculate the area for, please enter the option number',end='\n')
 print('1.Square',end='\n')
-print('2.Square',end='\n')
-print('3.Square',end='\n')
-print('4.Square',end='\n')
+print('2.Rectangle',end='\n')
+print('3.Triangle',end='\n')
+print('4.Circle',end='\n')
 print('Enter Option:')
 option=int(input('enter the option:'))
 if option==1:
     s=int(input('please enter the length of the side:'))
     a=s**2
-    print(a)
+    print("The area of square is:",a)
 if option==2:
     l=int(input('please enter the length of the rectangle:'))
     b=int(input('please enter the breadth of the rectangle:'))
     B=l*b
-    print(B)
+    print("The area of the rectangle is:",B)
 if option==3:
     b=int(input('please enter the base of the traingle:'))
     h=int(input('please enter the height of the traingle:'))
     c=(0.5)*b*h
-    print(c)
+    print("The area of the traingle is:",c)
 if option==4:
     r=int(input('please enter the radius of the circle:'))
     d=3.14*r*r
-    print(d)
+    print("The area of the circle is:",d)
 if option==str:
     print('invalid input, please enter a number')
